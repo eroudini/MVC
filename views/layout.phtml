@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <?php foreach(CONFIG_ROUTES as $key => $value) : ?>
+            <li>
+            <a href="?page=<?= $key?>">
+            <?= ucfirst($key) ?>
+            </a>
+            </li>
+            <?php endforeach ?>
+        </ul>
+    </nav>
+    <?php include "./views/template_".$page.".phtml"; ?>
+</body>
+</html>

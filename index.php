@@ -5,3 +5,5 @@ require "./config.php";
 require "./services/router.php";
 // --- le controlleur
 require "./controllers/controller_{$page}.php";
+
+

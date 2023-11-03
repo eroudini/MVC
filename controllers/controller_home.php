@@ -1,8 +1,6 @@
 <?php
 $db = connectDB();
-$sql = $db->prepare("SELECT * FROM my_table");
+$sql = $db->prepare("SELECT * FROM picture");
 $sql->execute();
-$results = $sql->fetchAll(PDO::FETCH_ASSOC);
-
-// --- la vue
+$pictures = $sql->fetchAll(PDO::FETCH_ASSOC);
 include "./views/layout.phtml";

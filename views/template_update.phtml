@@ -1,0 +1,38 @@
+
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+<h3 class="position-relative py-1 px-4 text-bg-green border border-secondary rounded-pill mt-4 mb-4">Update Picture</h3>
+
+
+
+<form method="POST">
+        <div class="row g-1">
+            <div class="col-2">
+                <input type="text" class="form-control" aria-label="First name" name="title" value="<?php echo $picture['title']; ?>">
+            </div> 
+            <div class="col-2">
+                <input type="text" class="form-control" aria-label="Last name" name="description" value="<?php echo $picture['description']; ?>">
+            </div> 
+            <div class="col-2">
+                <input type="text" class="form-control" aria-label="Last name" name="source" value="<?php echo $picture['source']; ?>">
+            </div>
+            <div class="col-2">
+                <input type="text" class="form-control" aria-label="Last name" name="author" value="<?php echo $picture['author']; ?>">
+            </div>
+            <div class="col-1">
+                <input type="submit" class="form-control" name="Update" value="Update">
+            </div>
+        </div>
+
+    </form>
+
+
+    <!-- <input type="submit" class="form-control" name="Update" value="Update"> -->
+
+    
+
+  
+    <!-- header("Location:?page=adminlist"); -->

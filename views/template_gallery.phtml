@@ -1,2 +1,20 @@
-<h1>GALLERY</h1>
-<h2><?= $info ?></h2>
+<h1  class="position-relative py-2 px-4 text-bg-secondary border border-secondary rounded-pill mt-4 mb-4">GALLERY</h1>
+
+
+<section class="row">
+<?php foreach ($pictures as $key => $pic) : ?>
+    
+
+  
+    <div class="card" style="width: 18rem;">
+  <img src=" <?= $pic['source'] ?>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><?= $pic['title']?></h5>
+    <p class="card-text"><?= $pic['description']?></p>
+    <a href="<?="?page=details&id=".$pic['id'] ?>" class="btn btn-primary">Details</a>
+  </div>
+</div>
+<?php endforeach ?>
+</section>
+
+

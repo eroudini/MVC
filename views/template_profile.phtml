@@ -1,0 +1,21 @@
+
+<?php
+define("CONFIG_SITE_TITLEs","Mon modèle MVC PHP");
+define("CONFIG_ROUTE",[
+    "home" => "home",
+    "gallery" => "gallery",
+    "Adminlist" => "adminlist",   
+]);
+
+const DB_HOSTa = "localhost";
+const DB_NAMEa = "DWWM_2023_10_20";
+const DB_USERa = "root";
+const DB_PASSa = "";
+function connectD(): PDO{
+    $db = new PDO('mysql:host='.DB_HOST.';port=3306;dbname='.DB_NAMEa.';charset=utf8',DB_USER,DB_PASSa);
+    return $db;
+}
+
+include "./views/layout.phtml"; 
+
+?>

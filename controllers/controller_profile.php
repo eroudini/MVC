@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 
 $connexion = new PDO('mysql:host='.DB_HOST.';port=3306;dbname='.DB_NAME.';charset=utf8',DB_USER,DB_PASS);
 if(isset($_GET['id']) AND $_GET['id'] >0 ){

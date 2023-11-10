@@ -1,32 +1,37 @@
-<h3 class="position-relative py-1 px-4 text-bg-green border border-secondary rounded-pill mt-4 mb-4">Admin Add Picture</h3>
-
-<form method="POST">
-
-    <div class="mb-3">
-        <label for="source" class="form-label">Source</label>
-        <input type="text" class="form-control" id="source" name="source" >
+<h1 class="mb-3 text-center">Admin Add Picture</h1>
+<pre>
+<?php var_dump($_FILES); ?>
+</pre>
+<?php if (!empty($errors)) : ?>
+    <div class="alert alert-danger" role="alert">
+        <?php foreach ($errors as $error) : ?>
+            <p><?= $error ?></p>
+        <?php endforeach; ?>
     </div>
-
-    <div class="mb-3">
-        <label for="title" class="form-label">Tile</label>
-        <input type="text" class="form-control" id="title" name="title" >
+<?php endif; ?>
+<?php if (isset($success)) : ?>
+    <div class="alert alert-success" role="alert">
+            <p>Le fichier a été uploadé avec succes !</p>
     </div>
-
-    <div class="mb-3">
-        <label for="description" class="form-label">Description</label>
-        <input type="text" class="form-control" id="description"  name="description">
-    </div>
-
-    <div class="mb-3">
-        <label for="author" class="form-label">Author</label>
-        <input type="text" class="form-control" id="author"  name="author">
-    </div>
-
-    <div class="mb-3">
-        
-        <input type="submit" class="btn btn-primary" value="Add Picture" name="submit" placeholder="Another input placeholder">
-    </div>
-
-
-
+<?php endif; ?>
+<form method="POST" enctype="multipart/form-data">
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" name="title" id="title" placeholder="Title">
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <input type="text" class="form-control" name="description" id="description" placeholder="Description">
+  </div>
+  <div class="mb-3">
+    <label for="src" class="form-label">File</label>
+    <input type="file" class="form-control" name="src" id="src" placeholder="Upload File">
+  </div>
+  <div class="mb-3">
+    <label for="author" class="form-label">Author</label>
+    <input type="text" class="form-control" name="author" id="author" placeholder="Author">
+  </div>
+  <div class="mb-3">
+    <input type="submit" class="btn btn-primary" name="submit" value="Add Picture">
+  </div>
 </form>
